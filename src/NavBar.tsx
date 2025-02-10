@@ -27,7 +27,7 @@ const NavBar = () => {
       {/* Left: App Title */}
 
       {/* Center: Search Bar */}
-      <div className="flex-1 flex justify-center ml-100">
+      <div className="flex-1 flex justify-center ml-60">
         <div className="relative w-64">
           <input
             type="text"
@@ -39,7 +39,7 @@ const NavBar = () => {
       </div>
 
       {/* Right: Login or Username */}
-      <div className="ml-130">
+      <div className="ml-90">
         {loggedInUser ? (
           <span className="text-white">{loggedInUser}</span>
         ) : (

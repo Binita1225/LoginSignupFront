@@ -1,4 +1,4 @@
-import { Home, Info, LogOut } from "lucide-react";
+import { Home, Info, LogOut, Award } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -11,6 +11,15 @@ const Sidebar = () => {
     localStorage.removeItem("userData"); // Remove user data from localStorage
     setLoggedInUser(null);
     navigate("/login");
+  };
+
+  const handleSkillsClick = () => {
+    const userData = JSON.parse(localStorage.getItem("userData") || "{}");
+    if (!userData || !userData.userName) {
+      navigate("/login");
+    } else {
+      navigate("/skills");
+    }
   };
 
   return (
@@ -60,13 +69,24 @@ const Sidebar = () => {
         <ul className="space-y-2">
           <li>
             <Link
-              to="/home"
+              to="/"
               className="flex items-center px-4 py-2 hover:bg-gray-700 rounded-md"
             >
               <Home className="w-5 h-5 mr-2" />
               Home
             </Link>
           </li>
+
+          <li>
+            <button
+              onClick={handleSkillsClick}
+              className="flex items-center px-4 py-2 hover:bg-gray-700 rounded-md"
+            >
+              <Award className="w-5 h-5 mr-2" />
+              Skills
+            </button>
+          </li>
+
           <li>
             <Link
               to="/about"
@@ -76,6 +96,7 @@ const Sidebar = () => {
               About
             </Link>
           </li>
+
           <li>
             <button
               onClick={handleLogout}

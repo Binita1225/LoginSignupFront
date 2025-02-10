@@ -65,7 +65,7 @@ const Login = () => {
       ); // Store userName and email
 
       console.log("Login successful");
-      navigate("/home", { state: { userName: returnedUserName } }); // Pass the correct userName
+      navigate("/", { state: { userName: returnedUserName } }); // Pass the correct userName
     } catch (err: any) {
       console.error("Login failed:", err.response?.data || err.message);
       setError(
