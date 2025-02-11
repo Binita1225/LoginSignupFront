@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
-import SidebarImage from "./image/sidebar.avif";
+import SidebarImage from "../image/sidebar.avif";
+
 import { useState } from "react";
 import axios from "axios";
 
