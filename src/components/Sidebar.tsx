@@ -10,7 +10,7 @@ const Sidebar = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("userData"); // Remove user data from localStorage
     setLoggedInUser(null);
-    navigate("/login");
+    navigate("/");
   };
 
   const handleSkillsClick = () => {
