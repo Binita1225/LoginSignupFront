@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import SidebarImage from "./image/sidebar.avif";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { axiosInstance } from "./axiosInstance";
+import { axiosInstance } from "../services/axiosInstance";
 
 const Login = () => {
   const [userName, setEmail] = useState("");

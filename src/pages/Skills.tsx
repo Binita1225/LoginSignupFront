@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaDotCircle } from "react-icons/fa";
-import NavBar from "./NavBar";
-import Sidebar from "./Sidebar";
+import NavBar from "../components/NavBar";
+import Sidebar from "../components/Sidebar";
 
 const Skills = () => {
   const [userData, setUserData] = useState(null);

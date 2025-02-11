@@ -4,11 +4,11 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import Login from "./Login";
-import Register from "./Register";
-import Home from "./Home";
-import About from "./About";
-import Skills from "./Skills";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Skills from "./pages/Skills";
 
 const PrivateRoute = ({ children }) => {
   const token = localStorage.getItem("token");
