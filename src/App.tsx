@@ -49,24 +49,50 @@ import About from "./pages/About";
 import Skills from "./pages/Skills";
 import { AuthProvider } from "./context/AuthContext";
 import PrivateRoute from "./routes/PrivateRoute";
+import Experience from "./pages/Experience";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   return (
     <AuthProvider>
       <Router>
         <Routes>
+          <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/" element={<Navigate to="/home" replace />} />
 
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route
+            path="/home"
+            element={
+              <PrivateRoute>
+                <Home />
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path="/about"
+            element={
+              <PrivateRoute>
+                <About />
+              </PrivateRoute>
+            }
+          />
 
           <Route
             path="/skills"
             element={
               <PrivateRoute>
                 <Skills />
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path="/experience"
+            element={
+              <PrivateRoute>
+                <Experience />
               </PrivateRoute>
             }
           />

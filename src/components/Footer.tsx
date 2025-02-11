@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="flex justify-between px-20">
         <div className="flex flex-row space-x-16">
           <div className="flex flex-col space-y-2">
-            <a href="/" className=" hover:text-blue-400">
+            <a href="/home" className=" hover:text-blue-400">
               Home
             </a>
             <a href="/skills" className=" hover:text-blue-400">
@@ -14,6 +14,9 @@ const Footer = () => {
             </a>
           </div>
           <div className="flex flex-col space-y-2">
+            <a href="/experience" className=" hover:text-blue-400">
+              Experience
+            </a>
             <a href="/about" className=" hover:text-blue-400">
               About
             </a>

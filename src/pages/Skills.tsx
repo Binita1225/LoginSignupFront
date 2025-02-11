@@ -5,21 +5,21 @@ import NavBar from "../components/NavBar";
 import Sidebar from "../components/Sidebar";
 
 const Skills = () => {
-  const [userData, setUserData] = useState(null);
-  const navigate = useNavigate();
+  // const [userData, setUserData] = useState(null);
+  // const navigate = useNavigate();
 
-  useEffect(() => {
-    const userData = JSON.parse(localStorage.getItem("userData") || "{}");
-    if (!userData || !userData.userName) {
-      navigate("/login");
-    } else {
-      setUserData(userData);
-    }
-  }, [navigate]);
+  // useEffect(() => {
+  //   const userData = JSON.parse(localStorage.getItem("userData") || "{}");
+  //   if (!userData || !userData.userName) {
+  //     navigate("/login");
+  //   } else {
+  //     setUserData(userData);
+  //   }
+  // }, [navigate]);
 
-  if (!userData) {
-    return null;
-  }
+  // if (!userData) {
+  //   return null;
+  // }
 
   return (
     <div className="flex h-screen">

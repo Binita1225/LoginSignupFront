@@ -5,42 +5,13 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { axiosInstance } from "../services/axiosInstance";
 
+
 const Login = () => {
   const [userName, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loggedInUser, setLoggedInUser] = useState(null);
   const navigate = useNavigate();
-
-  // const handleLogin = async (e: any) => {
-  //   e.preventDefault();
-  //   setError("");
-  //   console.log("Login Request:", { userName, password });
-
-  //   try {
-  //     const response = await axios.post(
-  //       "https://localhost:7161/api/UserApi/login",
-  //       {
-  //         userName,
-  //         password,
-  //       }
-  //     );
-
-  //     const token = response.data.token;
-  //     localStorage.setItem("token", token);
-  //     localStorage.setItem("userData", JSON.stringify(response.data)); // Store the entire user data
-  //     console.log("Login successful");
-  //     // Fetch the logged-in user data after login
-  //     await fetchLoggedInUser();
-
-  //     navigate("/home", { state: { userName: response.data.userName } });
-  //   } catch (err: any) {
-  //     console.error("Login failed:", err.response?.data || err.message);
-  //     setError(
-  //       err.response?.data?.message || "Login failed. Please try again."
-  //     );
-  //   }
-  // };
 
   const handleLogin = async (e: any) => {
     e.preventDefault();
@@ -66,7 +37,7 @@ const Login = () => {
       ); // Store userName and email
 
       console.log("Login successful");
-      navigate("/", { state: { userName: returnedUserName } }); // Pass the correct userName
+      navigate("/home", { state: { userName: returnedUserName } }); // Pass the correct userName
     } catch (err: any) {
       console.error("Login failed:", err.response?.data || err.message);
       setError(

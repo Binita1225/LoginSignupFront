@@ -6,19 +6,15 @@ import Footer from "../components/Footer";
 const About = () => {
   return (
     <div className="flex h-screen">
-      {/* Sidebar */}
       <div className="w-64 bg-gray-800 text-white fixed top-0 left-0 h-full z-10">
         <Sidebar />
       </div>
 
-      {/* Main Content */}
       <div className="flex-1 ml-64 flex flex-col">
-        {/* Navbar */}
         <div className="bg-gray-800 text-white h-16 flex items-center px-4 fixed top-0 left-64 right-0 z-10">
           <NavBar />
         </div>
 
-        {/* Page Content */}
         <div className="flex-1 mt-16 p-6 overflow-y-auto">
           <h1 className="text-3xl font-bold mb-4">About Me</h1>
           <div className="flex space-x-6">
@@ -39,7 +35,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Footer */}
         <div className="w-full bg-gray-800 text-white py-4 mt-auto">
           <Footer />
         </div>
