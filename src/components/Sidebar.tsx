@@ -1,4 +1,4 @@
-import { Home, Info, LogOut, Award, GraduationCap } from "lucide-react";
+import { Home, Info, LogOut, Award, GraduationCap, Laptop } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
@@ -45,6 +45,16 @@ const Sidebar = () => {
             >
               <GraduationCap className="w-5 h-5 mr-2" />
               Experience
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              to="/project"
+              className="flex items-center px-4 py-2 hover:bg-gray-700 rounded-md"
+            >
+              <Laptop className="w-5 h-5 mr-2" />
+              Project
             </Link>
           </li>
 

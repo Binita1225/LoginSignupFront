@@ -51,6 +51,7 @@ import { AuthProvider } from "./context/AuthContext";
 import PrivateRoute from "./routes/PrivateRoute";
 import Experience from "./pages/Experience";
 import LandingPage from "./pages/LandingPage";
+import Project from "./pages/Project";
 
 function App() {
   return (
@@ -93,6 +94,15 @@ function App() {
             element={
               <PrivateRoute>
                 <Experience />
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path="/project"
+            element={
+              <PrivateRoute>
+                <Project />
               </PrivateRoute>
             }
           />
