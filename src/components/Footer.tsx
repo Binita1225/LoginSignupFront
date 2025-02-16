@@ -22,9 +22,12 @@ const Footer = () => {
             </a>
           </div>
           <div className="flex flex-col space-y-2">
-            <a href="/about" className=" hover:text-blue-400">
-              About
+            <a href="/blog" className=" hover:text-blue-400">
+              Blog
             </a>
+            {/* <a href="/about" className=" hover:text-blue-400">
+              About
+            </a> */}
           </div>
         </div>
 

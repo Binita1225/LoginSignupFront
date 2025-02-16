@@ -1,41 +1,3 @@
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-//   Navigate,
-// } from "react-router-dom";
-// import Login from "./pages/Login";
-// import Register from "./pages/Register";
-// import Home from "./pages/Home";
-// import About from "./pages/About";
-// import Skills from "./pages/Skills";
-// import Layout from "./layouts/Layout";
-// import PrivateRoute from "./routes/PrivateRoute";
-
-// function App() {
-//   return (
-//     <Router>
-//       <Routes>
-//         <Route path="/login" element={<Login />} />
-//         <Route path="/register" element={<Register />} />
-//         <Route path="/" element={<Home />} />
-
-//         <Route path="/about" element={<About />} />
-//         <Route
-//           path="/skills"
-//           element={
-//             <PrivateRoute>
-//               <Skills />
-//             </PrivateRoute>
-//           }
-//         />
-//       </Routes>
-//     </Router>
-//   );
-// }
-
-// export default App;
-
 import {
   BrowserRouter as Router,
   Routes,
@@ -45,13 +7,15 @@ import {
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
-import About from "./pages/About";
+// import About from "./pages/About";
 import Skills from "./pages/Skills";
 import { AuthProvider } from "./context/AuthContext";
 import PrivateRoute from "./routes/PrivateRoute";
 import Experience from "./pages/Experience";
 import LandingPage from "./pages/LandingPage";
 import Project from "./pages/Project";
+import Blog from "./pages/Blog";
+// import ContactForm from "./pages/ContactForm";
 
 function App() {
   return (
@@ -71,14 +35,14 @@ function App() {
             }
           />
 
-          <Route
+          {/* <Route
             path="/about"
             element={
               <PrivateRoute>
                 <About />
               </PrivateRoute>
             }
-          />
+          /> */}
 
           <Route
             path="/skills"
@@ -103,6 +67,15 @@ function App() {
             element={
               <PrivateRoute>
                 <Project />
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path="/blog"
+            element={
+              <PrivateRoute>
+                <Blog />
               </PrivateRoute>
             }
           />
