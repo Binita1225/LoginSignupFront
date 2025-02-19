@@ -42,7 +42,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="https://github.com"
+            href="https://github.com/Binita1225"
             className="hover:text-blue-400"
             target="_blank"
             rel="noopener noreferrer"

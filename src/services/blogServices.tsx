@@ -13,11 +13,13 @@ export const getBlogById = async (id: number) => {
 };
 
 export const addBlog = async (blogData: any) => {
+  console.log("Sending data:", blogData);
   const response = await axios.post(API_URL, blogData);
   return response.data;
 };
 
 export const updateBlog = async (id, blogData) => {
+  console.log("Sending data:", blogData);
   const response = await axios.put(`${API_URL}/${id}`, blogData);
   return response.data;
 };

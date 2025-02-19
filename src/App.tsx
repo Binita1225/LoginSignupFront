@@ -15,6 +15,9 @@ import Experience from "./pages/Experience";
 import LandingPage from "./pages/LandingPage";
 import Project from "./pages/Project";
 import Blog from "./pages/Blog";
+import BlogForm from "./pages/BlogForm";
+import Testimonial from "./pages/Testimonial";
+import TestimonialForm from "./pages/TestimonialForm";
 // import ContactForm from "./pages/ContactForm";
 
 function App() {
@@ -34,15 +37,6 @@ function App() {
               </PrivateRoute>
             }
           />
-
-          {/* <Route
-            path="/about"
-            element={
-              <PrivateRoute>
-                <About />
-              </PrivateRoute>
-            }
-          /> */}
 
           <Route
             path="/skills"
@@ -76,6 +70,51 @@ function App() {
             element={
               <PrivateRoute>
                 <Blog />
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path="/addBlog"
+            element={
+              <PrivateRoute>
+                <BlogForm />
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path="/edit-blog/:id"
+            element={
+              <PrivateRoute>
+                <BlogForm />
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path="/testimonial"
+            element={
+              <PrivateRoute>
+                <Testimonial />
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path="/add-testimonial"
+            element={
+              <PrivateRoute>
+                <TestimonialForm />
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path="/edit-testimonial/:id"
+            element={
+              <PrivateRoute>
+                <TestimonialForm />
               </PrivateRoute>
             }
           />

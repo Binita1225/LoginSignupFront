@@ -68,15 +68,15 @@ const Sidebar = () => {
             </Link>
           </li>
 
-          {/* <li>
+          <li>
             <Link
-              to="/about"
+              to="/testimonial"
               className="flex items-center px-4 py-2 hover:bg-gray-700 rounded-md"
             >
-              <Info className="w-5 h-5 mr-2" />
-              About
+              <Eye className="w-5 h-5 mr-2" />
+              Testimonial
             </Link>
-          </li> */}
+          </li>
 
           <li>
             <button
